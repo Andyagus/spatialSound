@@ -22,8 +22,7 @@ export default class MusicNote extends React.Component{
 					e.preventDefault();
 					this.setState({draggedElementX:e.pageX})
 					this.setState({draggedElementY:e.pageY})
-				}}
-					/>
+				}}/>
 				
 		</div>
 		)
