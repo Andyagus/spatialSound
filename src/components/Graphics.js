@@ -12,15 +12,6 @@ export default class Graphics extends React.Component{
 	}
 
 
-	drag = (e) => {
-		e.preventDefault()
-		console.log(e.nativeEvent.style)
-		const newValue = e.nativeEvent.y + 100
-		this.setState({dragging: newValue})
-	}
-
-
-
 	render(){
 
 		
@@ -36,7 +27,7 @@ export default class Graphics extends React.Component{
 
 				}}> 
 				</div>
-				<MusicNote drag = {this.drag} />
+				<MusicNote graphicAudioPosition={this.props.graphicAudioPosition}/>
 			</div>
 		)
 	}
