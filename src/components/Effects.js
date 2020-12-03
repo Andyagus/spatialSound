@@ -10,7 +10,6 @@ export default class Effects extends React.Component{
 	render(){
 		return(
 			<div> 
-				<h4> effects </h4>
 				<p> Volume </p> 
 				<input onChange={(e)=> {
 					this.setState({gainLevel: e.target.value},

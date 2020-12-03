@@ -19,9 +19,7 @@ export default class Graphics extends React.Component{
 
 			<div>
 
-				<h1> Graphics </h1>
 				<div style={{
-					border:"1px solid red",
 					width:"200px",
 					height: "200px"
 

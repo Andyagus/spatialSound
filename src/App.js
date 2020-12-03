@@ -65,11 +65,12 @@ export default class App extends React.Component{
   }
 
   graphicAudioPosition = (elementY, elementX) => {
+      //setting gain
       this.setState({gainValue: elementY/100})
       this.state.gainNode.gain.value = this.state.gainValue 
 
-      this.setState({pan: elementX})
-
+      //setting pan
+      this.setState({pan: elementX/100})
       this.state.panner.pan.value = this.state.pan
 
   }
@@ -80,7 +81,6 @@ export default class App extends React.Component{
       <h1> Tone Handler </h1>
       <audio src={this.state.song}></audio>
       <PlayButton playClickHandler={this.playClickHandler} />
-      <Effects effectHandler={this.effectHandler} panHandler={this.panHandler} />
       <Graphics graphicAudioPosition={this.graphicAudioPosition}/>
       </div>
     )

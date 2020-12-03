@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom'
 export default class MusicNote extends React.Component{
 
 	state = {
-		draggedElementY: 100,
-		draggedElementX: 100
+		draggedElementY: 300,
+		draggedElementX: 500
 		}
 	render(){
 		console.log(this.props)
