@@ -64,12 +64,14 @@ export default class App extends React.Component{
     this.state.panner.pan.value = this.state.pan
   }
 
-  graphicAudioPosition = (elementY) => {
-      console.log(elementY)
-      this.setState({gainValue: elementY/100},
-      console.log(this.state.gainValue),
+  graphicAudioPosition = (elementY, elementX) => {
+      this.setState({gainValue: elementY/100})
       this.state.gainNode.gain.value = this.state.gainValue 
-    )
+
+      this.setState({pan: elementX})
+
+      this.state.panner.pan.value = this.state.pan
+
   }
 
   render(){

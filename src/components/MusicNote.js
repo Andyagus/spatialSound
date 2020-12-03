@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom'
 export default class MusicNote extends React.Component{
 
 	state = {
-		draggedElementY: 100+100,
-		draggedElementX: 100+100
+		draggedElementY: 100,
+		draggedElementX: 100
 		}
 	render(){
 		console.log(this.props)
@@ -13,19 +13,22 @@ export default class MusicNote extends React.Component{
 		<div>
 			<img style ={{
 				  position: "absolute",
-				  top: this.state.draggedElementY,
-				  // left: this.state.draggedElementX,
+				  top: this.state.draggedElementY + 'px',
+				  left: this.state.draggedElementX + 'px',
 					border: "3px solid #73AD21"
 
 			}}src = {process.env.PUBLIC_URL + 'music-note.png'} draggable = "true" 
 				onDragOver = {(e) => {
+
 					e.stopPropagation();
 					e.preventDefault();
-					this.setState({draggedElementX:e.pageX})
-					this.setState({draggedElementY:e.pageY},
-					this.props.graphicAudioPosition(this.state.draggedElementY))
-				}} onDrag = {(e) => {
-					console.log("drag smag")
+					
+					const upYAxis = e.pageY 
+					const rightXAxis = e.pageX
+					this.setState({draggedElementX:rightXAxis - 100})
+					this.setState({draggedElementY:upYAxis - 100},
+					this.props.graphicAudioPosition(this.state.draggedElementY, this.state.draggedElementX))
+					console.log(e.pageY)
 				}}/>
 				
 		</div>
