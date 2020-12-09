@@ -2,6 +2,7 @@ import './App.css';
 import PlayButton from './components/PlayButton'
 import Effects from './components/Effects'
 import Graphics from './components/Graphics'
+import SoundChooser from './components/SoundChooser'
 import React from 'react'
 
 export default class App extends React.Component{
@@ -71,11 +72,13 @@ export default class App extends React.Component{
       //setting gain
       this.setState({gainValue: elementY/100})
       this.state.gainNode.gain.value = this.state.gainValue 
-
       //setting pan
       this.setState({pan: elementX/100})
       this.state.panner.pan.value = this.state.pan
+  }
 
+  chosenSound = () => {
+    
   }
 
   render(){
@@ -85,6 +88,7 @@ export default class App extends React.Component{
       <audio src={this.state.song}></audio>
       <PlayButton playClickHandler={this.playClickHandler} />
       <Graphics graphicAudioPosition={this.graphicAudioPosition}/>
+      <SoundChooser />
       </div>
     )
   }
