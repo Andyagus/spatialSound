@@ -64,7 +64,10 @@ export default class App extends React.Component{
     this.state.panner.pan.value = this.state.pan
   }
 
+
+//how to flip sounds?
   graphicAudioPosition = (elementY, elementX) => {
+      console.log(elementY)
       //setting gain
       this.setState({gainValue: elementY/100})
       this.state.gainNode.gain.value = this.state.gainValue 

@@ -28,7 +28,7 @@ export default class MusicNote extends React.Component{
 					this.setState({draggedElementX:rightXAxis - 100})
 					this.setState({draggedElementY:upYAxis - 100},
 					this.props.graphicAudioPosition(this.state.draggedElementY, this.state.draggedElementX))
-					console.log(e.pageY)
+					// console.log(e.pageY)
 				}}/>
 				
 		</div>
