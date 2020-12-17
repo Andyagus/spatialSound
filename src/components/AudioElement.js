@@ -27,10 +27,3 @@ export default class AudioElement extends React.Component{
 			
 		}
 }
-
-    // const AudioContext = window.AudioContext || window.webkitAudioContext;
-    // const audioContext = new AudioContext();
-    // const audioElement = document.querySelector('audio')
-    // const track = audioContext.createMediaElementSource(audioElement)
-    // track.connect(audioContext.destination)
-    // const playButton = document.querySelector('button')
